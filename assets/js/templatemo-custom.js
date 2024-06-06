@@ -1,3 +1,9 @@
+
+$(document).ready(function() {
+  $('.menu-trigger').click(function() {
+    $('.header-area .main-nav .nav').toggleClass('open');
+  });
+});
 (function ($) {
 	
 	"use strict";
