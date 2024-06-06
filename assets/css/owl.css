@@ -5,7 +5,8 @@
  */
 /*
  *  Owl Carousel - Core
- */@media (max-width: 768px) {
+ */
+ @media (max-width: 768px) {
   .owl-carousel .owl-item {
     width: 100% !important;
   }

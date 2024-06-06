@@ -1,7 +1,27 @@
-
 $(document).ready(function() {
-  $('.menu-trigger').click(function() {
-    $('.header-area .main-nav .nav').toggleClass('open');
+  // Menu Dropdown Toggle
+  if ($('.menu-trigger').length) {
+    $(".menu-trigger").on('click', function() {
+      $(this).toggleClass('active');
+      $('.header-area .nav').slideToggle(200);
+    });
+  }
+
+  // Window Resize Mobile Menu Fix
+  function mobileNav() {
+    var width = $(window).width();
+    $('.submenu').on('click', function() {
+      if (width < 767) {
+        $('.submenu ul').removeClass('active');
+        $(this).find('ul').toggleClass('active');
+      }
+    });
+  }
+
+  // Call mobileNav function on load and resize
+  mobileNav();
+  $(window).resize(function() {
+    mobileNav();
   });
 });
 (function ($) {
