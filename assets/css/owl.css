@@ -5,7 +5,22 @@
  */
 /*
  *  Owl Carousel - Core
- */
+ */@media (max-width: 768px) {
+  .owl-carousel .owl-item {
+    width: 100% !important;
+  }
+
+  .owl-carousel .owl-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .owl-carousel .owl-nav button {
+    font-size: 12px;
+  }
+}
+
 .owl-carousel {
   display: none;
   width: 100%;
